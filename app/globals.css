@@ -1446,6 +1446,14 @@ h3 {
     border-bottom: 1px solid var(--line);
   }
 
+  .attendance-toolbar {
+    position: static;
+    top: auto;
+    z-index: auto;
+    padding-block: 0;
+    border-bottom: 0;
+  }
+
   .role-switch,
   .role-switch select {
     width: 100%;
