@@ -1446,6 +1446,12 @@ h3 {
     border-bottom: 1px solid var(--line);
   }
 
+  .attendance-sticky {
+    position: static;
+    top: auto;
+    z-index: auto;
+  }
+
   .attendance-toolbar {
     position: static;
     top: auto;

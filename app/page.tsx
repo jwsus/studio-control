@@ -24,7 +24,16 @@ import {
   ProfessoresView,
   RelatoriosView,
 } from "./components/views";
-import { alunosIniciais, hoje, usuariosIniciais, valorAulaAvulsa, valorCredito } from "./data";
+import {
+  alunosIniciais,
+  aulasIniciais,
+  hoje,
+  movimentacoesIniciais,
+  participacoesIniciais,
+  usuariosIniciais,
+  valorAulaAvulsa,
+  valorCredito,
+} from "./data";
 import type { Aba, Aluno, Aula, FormaPagamento, Modalidade, Movimentacao, Participacao, Usuario } from "./types";
 import { agora, criarId, proximoHorarioRedondo } from "./utils";
 
@@ -49,9 +58,9 @@ export default function Home() {
   const [usuarios, setUsuarios] = useState<Usuario[]>(usuariosIniciais);
   const [usuarioAtualId, setUsuarioAtualId] = useState(usuariosIniciais[1].id);
   const [alunos, setAlunos] = useState<Aluno[]>(alunosIniciais);
-  const [aulas, setAulas] = useState<Aula[]>([]);
-  const [participacoes, setParticipacoes] = useState<Participacao[]>([]);
-  const [movimentacoes, setMovimentacoes] = useState<Movimentacao[]>([]);
+  const [aulas, setAulas] = useState<Aula[]>(aulasIniciais);
+  const [participacoes, setParticipacoes] = useState<Participacao[]>(participacoesIniciais);
+  const [movimentacoes, setMovimentacoes] = useState<Movimentacao[]>(movimentacoesIniciais);
   const [aulaAtualId, setAulaAtualId] = useState("");
   const [modalidade, setModalidade] = useState<Modalidade>("pilates");
   const [horario, setHorario] = useState(() => proximoHorarioRedondo());
