@@ -798,9 +798,7 @@ h3 {
 }
 
 .attendance-sticky {
-  position: sticky;
-  top: calc(var(--topbar-height) + 8px);
-  z-index: 20;
+  position: static;
   display: grid;
   gap: 10px;
   padding-bottom: 10px;
@@ -1444,12 +1442,6 @@ h3 {
     padding-block: 10px;
     background: var(--panel);
     border-bottom: 1px solid var(--line);
-  }
-
-  .attendance-sticky {
-    position: static;
-    top: auto;
-    z-index: auto;
   }
 
   .attendance-toolbar {
