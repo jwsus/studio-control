@@ -1,0 +1,116 @@
+import type { Aluno, Usuario } from "./types";
+
+const nomesAlunosTeoricos = [
+  "Ana Clara Mendes",
+  "Beatriz Oliveira",
+  "Carolina Ribeiro",
+  "Daniela Martins",
+  "Eduarda Fernandes",
+  "Fernanda Lima",
+  "Gabriela Rocha",
+  "Helena Cardoso",
+  "Isabela Nogueira",
+  "Juliana Barbosa",
+  "Larissa Teixeira",
+  "Mariana Castro",
+  "Natalia Almeida",
+  "Patricia Moreira",
+  "Renata Duarte",
+  "Sofia Azevedo",
+  "Tatiane Ramos",
+  "Valeria Correia",
+  "Amanda Vieira",
+  "Bianca Carvalho",
+  "Bruno Andrade",
+  "Caio Martins",
+  "Diego Souza",
+  "Eduardo Pereira",
+  "Felipe Gomes",
+  "Gustavo Henrique",
+  "Henrique Batista",
+  "Igor Matheus",
+  "Joao Victor",
+  "Lucas Gabriel",
+  "Marcos Vinicius",
+  "Mateus Almeida",
+  "Pedro Henrique",
+  "Rafael Costa",
+  "Rodrigo Nunes",
+  "Thiago Moreira",
+  "Victor Hugo",
+  "Andre Luiz",
+  "Carlos Eduardo",
+  "Leonardo Ramos",
+  "Aline Moraes",
+  "Camila Torres",
+  "Debora Cristina",
+  "Elaine Farias",
+  "Flavia Rezende",
+  "Leticia Campos",
+  "Priscila Monteiro",
+  "Raquel Freitas",
+  "Simone Lopes",
+  "Vanessa Martins",
+];
+
+const alunosTeoricos: Aluno[] = nomesAlunosTeoricos.map((nome, index) => ({
+  id: `teorico_${index + 1}`,
+  nome,
+  saldo_creditos: 0,
+  ativo: true,
+  criado_em: new Date().toISOString(),
+}));
+
+export const usuariosIniciais: Usuario[] = [
+  {
+    id: "u_admin",
+    nome: "Renato Lima",
+    telefone: "(11) 97777-4433",
+    perfil: "admin",
+    ativo: true,
+    criado_em: new Date().toISOString(),
+  },
+  {
+    id: "u_prof",
+    nome: "Marina Alves",
+    telefone: "(11) 98888-1122",
+    perfil: "professor",
+    ativo: true,
+    criado_em: new Date().toISOString(),
+  },
+];
+
+export const alunosIniciais: Aluno[] = [
+  {
+    id: "a1",
+    nome: "Camila Santos",
+    telefone: "(11) 99921-1000",
+    cpf: "123.456.789-00",
+    saldo_creditos: 0,
+    ativo: true,
+    criado_em: new Date().toISOString(),
+  },
+  {
+    id: "a2",
+    nome: "Joao Pereira",
+    telefone: "(11) 98810-2040",
+    cpf: "321.654.987-00",
+    saldo_creditos: 0,
+    ativo: true,
+    criado_em: new Date().toISOString(),
+  },
+  {
+    id: "a3",
+    nome: "Bruna Costa",
+    telefone: "(11) 97654-3210",
+    cpf: "111.222.333-44",
+    saldo_creditos: 0,
+    ativo: true,
+    criado_em: new Date().toISOString(),
+  },
+  ...alunosTeoricos,
+];
+
+export const hoje = new Date().toISOString().slice(0, 10);
+export const valorAulaAvulsa = 10;
+export const valorCredito = 10;
